@@ -4,4 +4,14 @@
 # or whitespace (' ').
 class EmailParser
   
+  def initialize(emails)
+    @emails = emails 
+  end 
+  
+  def parse
+    email = @emails.split(",").join(" ")
+    email = email.split(" ")
+    list = email.select{|item| item.size > 5} 
+  end
+  
 end
